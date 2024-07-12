@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rocketseat Discord</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="preconnect" href="https://picsum.photos" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@3.4.4/src/css/preflight.css" />
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body x-data="{ dark: true }" :class="!dark ? 'light' : ''">
+    <main>
+      <header>
+        <img class="avatar" src="https://github.com/dreisss.png" />
+
+        <p>@dreisss</p>
+      </header>
+
+      <div>
+        <label class="switch">
+          <div class="track"></div>
+          <div class="handle" x-show="dark">
+            <i data-lucide="moon-star"></i>
+          </div>
+
+          <div class="handle light" x-show="!dark">
+            <i data-lucide="sun"></i>
+          </div>
+
+          <input x-data x-model="dark" type="checkbox" />
+        </label>
+      </div>
+
+      <section id="buttons">
+        <a class="btn" href="https://github.com/dxdotdev/arc-ui">Arc UI to Firefox</a>
+
+        <a class="btn" href="https://github.com/dreisss/dotfiles">dotfiles</a>
+      </section>
+
+      <section id="socials">
+        <a class="social" href="https://github.com/dreisss" target="_blank">
+          <i data-lucide="github"></i>
+        </a>
+
+        <a class="social" href="https://www.instagram.com/dreisss__" target="_blank">
+          <i data-lucide="instagram"></i>
+        </a>
+      </section>
+
+      <footer>
+        <p>Feito com ♥ por dreisss</p>
+      </footer>
+    </main>
+  </body>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</html>

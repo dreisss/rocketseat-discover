@@ -1,0 +1,183 @@
+:root {
+  --text-md-font-size: 1rem;
+  --text-md-line-height: 1.5rem;
+  --text-md-font-weight: 500;
+
+  --text-sm-font-size: 0.875rem;
+  --text-sm-line-height: 1.5rem;
+  --text-sm-font-weight: 400;
+
+  --toggle-handle-color: rgba(255, 255, 255, 1);
+  --toggle-handle-text-color: rgba(0, 0, 0, 1);
+
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  background-image: url("https://picsum.photos/1024/512?blur");
+  background-size: cover;
+}
+
+body {
+  --text-color: rgba(255, 255, 255, 1);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  color-scheme: dark;
+}
+
+body.light {
+  --text-color: rgba(0, 0, 0, 1);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  color-scheme: light;
+}
+
+.avatar {
+  border: 2px solid var(--stroke-color);
+  border-radius: 10rem;
+  width: 8rem;
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.switch .track {
+  width: 4rem;
+  height: 1.5rem;
+  border: 1px solid var(--stroke-color);
+  border-radius: 10rem;
+}
+
+.switch .handle {
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  border-radius: 10rem;
+  background-color: var(--toggle-handle-color);
+  color: var(--toggle-handle-text-color);
+}
+
+.switch .handle.light {
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+
+.switch .handle .lucide {
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+}
+
+.switch:active .handle {
+  outline: 0.5rem solid var(--highlight-color);
+}
+
+.switch input {
+  position: absolute;
+  z-index: -10;
+  opacity: 0;
+}
+.btn {
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--stroke-color);
+  border-radius: 0.5rem;
+  background-color: var(--surface-color);
+  color: var(--text-color);
+  text-align: center;
+  font-size: var(--text-md-font-size);
+  line-height: var(--text-md-line-height);
+  font-weight: var(--text-md-font-weight);
+  transition: color 200ms ease-in;
+  transition: background-color 200ms ease-in;
+  white-space: nowrap;
+  min-width: 10rem;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: var(--surface-color-hover);
+  border-color: var(--text-color);
+}
+
+.social {
+  display: flex;
+  padding: 1rem;
+  border-radius: 10rem;
+  transition: background-color 200ms ease-in;
+}
+
+.social .lucide {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--text-color);
+}
+
+.social:hover {
+  background-color: var(--highlight-color);
+}
+
+body {
+  min-width: 448px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 3.5rem;
+
+  background-image: linear-gradient(to bottom, #000a, #0000);
+}
+
+p {
+  color: var(--text-color);
+}
+
+main,
+main > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+#buttons,
+#socials {
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+#socials {
+  flex-direction: row;
+}
+
+footer {
+  padding: 1.5rem;
+}
