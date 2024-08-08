@@ -1,6 +1,6 @@
 <img src="./.github/assets/header.svg" height="64px" />
 
-Projeto desenvolvido no curso Discover da Rocketseat.
+Projeto desenvolvido no curso `Discover` da Rocketseat.
 
 Tecnologias utilizadas:
 
